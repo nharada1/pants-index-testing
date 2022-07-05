@@ -1,0 +1,20 @@
+[GLOBAL]
+pants_version = "2.12.0"
+backend_packages = [
+  "pants.backend.python",
+]
+
+[anonymous-telemetry]
+enabled = true
+repo_id = "9ce2be43-f80c-46d9-ba74-f01cbfd2448c"
+
+[python]
+interpreter_constraints = ["CPython==3.9.*"]
+enable_resolves = true
+lockfile_generator = "pex"
+
+[python-repos]
+indexes.add = ["https://download.pytorch.org/whl/cu116"]
+
+[python.resolves]
+python-default = "third_party/lockfile_path.txt" 
